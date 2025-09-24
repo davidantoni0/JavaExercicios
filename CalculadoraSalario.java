@@ -1,7 +1,7 @@
 public class CalculadoraSalario {
     public static void main(String[] args) {
         String nome = "João";
-        double salario = 2500.00;
+        double salario = 2500.0;
 
         if(salario <= 1751.81){
             System.out.println("O funcionário " + nome + " tem um salário de R$ " + salario + " e terá descontado 8% da sua renda.");
