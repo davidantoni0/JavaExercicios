@@ -1,7 +1,7 @@
 public class CalculadoraSalario {
     public static void main(String[] args) {
         String nome = "João";
-        double salario = 1600.0;
+        double salario = 1600.74;
         double desconto;
 
         if(salario <= 1751.81){
