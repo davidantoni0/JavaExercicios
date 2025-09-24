@@ -1,9 +1,9 @@
 public class ClassificadorDeIdade {
     public static void main(String[] args) {
-        int idade = -1;
+        int idade = 25;
 
         do {
-
+            
             if (idade < 0) {
                 System.out.println("Idade inválida");
             }
