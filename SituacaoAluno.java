@@ -8,7 +8,7 @@ public class SituacaoAluno {
         double nota2 = scanner.nextDouble();
         double media = (nota1 + nota2) / 2;
         
-        if (media == 10) {
+        if (media >= 10) {
             System.out.println("Aprovado parabéns!");  
         }else if (media >= 7.0) {
             System.out.println("Aprovado!");
