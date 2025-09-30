@@ -22,7 +22,7 @@ public class BoletimEscolar {
             for (int j = 0; j < NUMERO_DE_NOTAS; j++) {
                 mensagem += notasAlunos[i][j] + " ";
             }
-            mensagem += "- Média: " + media[i] + "\n";
+            mensagem += "- Média: " + String.format("%.2f", media[i]) + "\n";
         }
 
         JOptionPane.showMessageDialog(null, mensagem);
