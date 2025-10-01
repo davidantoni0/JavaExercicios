@@ -2,24 +2,23 @@ import javax.swing.JOptionPane;
 
 public class BoletimEscolar {
     public static void main(String[] args) {
-        final int NUMERO_DE_ALUNOS = 3;
-        final int NUMERO_DE_NOTAS = 4;
-        double notasAlunos[][] = new double[NUMERO_DE_ALUNOS][NUMERO_DE_NOTAS];
-        double soma = 0;
-        double[] media = new double[NUMERO_DE_ALUNOS];
 
-        for(int i = 0; i < NUMERO_DE_ALUNOS; i++){
-            for(int j = 0; j < NUMERO_DE_NOTAS; j++){
+        double notasAlunos[][] = new double[3][4];
+        double soma = 0;
+        double[] media = new double[3];
+
+        for(int i = 0; i < notasAlunos.length; i++){
+            for(int j = 0; j < notasAlunos[i].length; j++){
                 notasAlunos[i][j] =     Double.parseDouble(JOptionPane.showInputDialog("Digite a nota " + (j + 1) + " do aluno " + (i + 1) + ":"));
                 soma += notasAlunos[i][j];
             }
-            media[i] = soma / NUMERO_DE_NOTAS;
+            media[i] = soma / notasAlunos[i].length;
             soma = 0;
         }
         String mensagem = "Notas dos alunos:\n";
-        for (int i = 0; i < NUMERO_DE_ALUNOS; i++) {
+        for (int i = 0; i < notasAlunos.length; i++) {
             mensagem += "Aluno " + (i + 1) + " - Notas: ";
-            for (int j = 0; j < NUMERO_DE_NOTAS; j++) {
+            for (int j = 0; j < notasAlunos[i].length; j++) {
                 mensagem += notasAlunos[i][j] + " ";
             }
             mensagem += "- Média: " + String.format("%.2f", media[i]) + "\n";
