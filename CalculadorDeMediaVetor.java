@@ -11,7 +11,7 @@ public class CalculadorDeMediaVetor {
             notas[i] = scanner.nextDouble();
             soma += notas[i];
         }
-        System.out.println("A média das notas é: " + (soma / notas.length));
+        System.out.printf("A média das notas é: %.2f" , (soma / notas.length));
         scanner.close();
 
     }
