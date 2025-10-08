@@ -9,14 +9,14 @@ public class BuscaBinaria {
             int meio = inicio + (fim - inicio) / 2;
 
             if (vetor[meio] == valorProcurado) {
-                return meio; // Retorna o índice onde o valor foi encontrado
+                return meio;
             }
             if (vetor[meio] < valorProcurado) {
-                inicio = meio + 1; // Continua a busca na metade direita
+                inicio = meio + 1;
             } else {
-                fim = meio - 1; // Continua a busca na metade esquerda
+                fim = meio - 1;
             }
         }
-        return -1; // Retorna -1 se o valor não foi encontrado
+        return -1;
     }
 }

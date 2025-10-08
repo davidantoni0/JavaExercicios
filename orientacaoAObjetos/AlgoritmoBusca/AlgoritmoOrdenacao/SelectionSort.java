@@ -11,7 +11,7 @@ public class SelectionSort {
                     posicaoMenorNumero = j;
                 }
             }
-            // Troca o elemento mínimo encontrado com o primeiro elemento
+  
             int temp = vetor[posicaoMenorNumero];
             vetor[posicaoMenorNumero] = vetor[i];
             vetor[i] = temp;
