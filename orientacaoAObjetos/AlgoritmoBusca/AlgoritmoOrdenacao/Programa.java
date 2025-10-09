@@ -12,7 +12,7 @@ public class Programa {
         System.out.println();
         
 
-        SelectionSort.selectionSort(array);
+        InsertionSort.insertionSort(array);
 
         System.out.println("Array ordenado:");
         for (int num : array) {
