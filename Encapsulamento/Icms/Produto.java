@@ -19,4 +19,14 @@ public class Produto {
     public double getQuantidade() {
         return quantidade;
     }
+    void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
+    void setValor(double valor) {
+        this.valor = valor;
+    }
+
 }
