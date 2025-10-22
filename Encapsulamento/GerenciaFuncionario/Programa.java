@@ -3,9 +3,7 @@ import javax.swing.JOptionPane;
 
 public class Programa {
     public static void main(String[] args) {
-        //Usando JOptionPane para exibir os resultados
         JOptionPane.showMessageDialog(null, "Gerenciamento de Funcionários");
-        // Declare the variable without calling an undefined constructor
         Funcionario funcionario = null;
         String nome = JOptionPane.showInputDialog("Digite o nome do funcionário:");
         double salario = Double.parseDouble(JOptionPane.showInputDialog("Digite o salário do funcionário:"));
