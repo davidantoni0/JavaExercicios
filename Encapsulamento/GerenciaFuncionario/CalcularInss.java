@@ -1,4 +1,4 @@
-package GerenciaFuncionario;
+package Encapsulamento.GerenciaFuncionario;
 
 public class CalcularInss {
     public static double calcularInss(Funcionario funcionario) {

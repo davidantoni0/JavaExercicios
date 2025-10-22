@@ -1,4 +1,4 @@
-package GerenciaFuncionario;
+package Encapsulamento.GerenciaFuncionario;
 import javax.swing.JOptionPane;
 
 public class Programa {
