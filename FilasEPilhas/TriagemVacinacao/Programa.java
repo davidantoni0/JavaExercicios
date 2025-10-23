@@ -1,5 +1,6 @@
 package FilasEPilhas.TriagemVacinacao;
 
+
 public class Programa {
     public static void main(String[] args) {
         Pessoa pessoas[] = new Pessoa[5];
@@ -9,17 +10,28 @@ public class Programa {
         pessoas[3] = new Pessoa("Daniel", 30);
         pessoas[4] = new Pessoa("Eva", 80);
 
-        FilaPreferencial filaPreferencial = new FilaPreferencial(5);
-        FilaComum filaComum = new FilaComum(5);
-
+        
+        Fila filaPrincipal = new Fila(5);
+        Fila filaPreferencial = new Fila(5);
+        Fila filaComum = new Fila(5);
+        
         for (int i = 0; i < pessoas.length; i++) {
-            filaPreferencial.enqueue(pessoas[i]);
-            filaComum.enqueue(pessoas[i]);
+            filaPrincipal.enqueue(pessoas[i]);
+        }
+        
+        int tamanhoDaFila = filaPrincipal.tamanho();
+
+        for (int i = 0; i < tamanhoDaFila; i++) {
+            Pessoa p = filaPrincipal.dequeue();
+            if (p.getIdade() >= 60) {
+                filaPreferencial.enqueue(p);
+            } else {
+                filaComum.enqueue(p);
+            }
         }
         System.out.println("\nFila preferencial:");
         filaPreferencial.mostrarFila();
         System.out.println("\nFila comum:");
         filaComum.mostrarFila();
-
     }
 }
