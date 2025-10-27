@@ -19,23 +19,25 @@ public class Programa {
             filaPrincipal.enqueue(pessoa);
         }
 
-        int tamanhoFila = filaPrincipal.tamanho();
 
-        for (int i = 0; i < tamanhoFila; i++) {
-            if (pilhaEmbarque.tamanho() < 4) {
-            Pessoa p = filaPrincipal.dequeue();
-            pilhaEmbarque.push(p);
+        while(!filaPrincipal.isEmpty()){
+            for (int i = 0; i < 4 && !filaPrincipal.isEmpty(); i++) {
+                
+                Pessoa p = filaPrincipal.dequeue();
+                pilhaEmbarque.push(p);
+                System.out.println();                               
             }
-            System.out.println();                               
-        }
-
-        System.out.println("Pessoas na pilha de embarque:");
-        pilhaEmbarque.mostrarPilha();
-        System.out.println("\nPessoas restantes na fila principal:");
-        filaPrincipal.mostrarFila();
-
-        for (int i = 0; i < 4; i++) {
-            pilhaEmbarque.pop();
+            
+            System.out.println("Pessoas na pilha de embarque:");
+            pilhaEmbarque.mostrarPilha();
+            System.out.println("\nPessoas restantes na fila principal:");
+            filaPrincipal.mostrarFila();
+            
+            for (int i = 0; i < 4 && !pilhaEmbarque.isEmpty(); i++){
+                pilhaEmbarque.pop();
+                
+            }
+            
         }
     }
 }
